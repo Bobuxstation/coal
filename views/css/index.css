@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+}
+body {
+    background: var(--main-color);
+    color: var(--main-text);
+    font-family: system-ui;
+}
+.menu-tab {
+    display: flex;
+    flex-direction: row;
+    background: var(--main-color);
+    color: var(--main-text);
+    /*-webkit-app-region: drag;*/
+}
+img {
+    width: 24px;
+}
+.tab {
+    padding: 10px;
+    -webkit-appearance: none;
+    border: none;
+}
+.selected {background: var(--main-hover-color);}
+.unselected {background: var(--main-color);}
+.unselected:hover {background: var(--main-hover-color);}
+.container {
+    background: var(--main-hover-color);
+    display: flex;
+}
+.navbars {
+    margin-left: auto;
+    order: 2;
+}
+.navbutton {
+    padding: 10px;
+    -webkit-appearance: none;
+    border: none;
+    background: var(--main-color);
+}
+.navbutton:hover {
+    background: var(--main-hover-color) !important;
+}
+.container {
+    position: absolute;
+    top: 47px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+object {
+    width: 100%;
+    height: 100%;
+}

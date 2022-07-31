@@ -1,0 +1,28 @@
+{
+  "name": "coal",
+  "version": "0.0.1",
+  "description": "a simple game launcher",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "browser":{
+    "child_process": true
+  },
+  "keywords": [
+    "game",
+    "launcher",
+    "games"
+  ],
+  "author": "zeankun.dev <zeanfender11@gmail.com>",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "electron": "^19.0.10"
+  },
+  "dependencies": {
+    "@electron/remote": "^2.0.8",
+    "electron-reloader": "^1.2.3",
+    "webpack": "^5.74.0"
+  }
+}
