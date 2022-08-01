@@ -9,7 +9,7 @@ app.on('ready', () => {
         height: 600,
         title: 'AB Coal',
         frame: false,
-        icon: './assets/logo_1024.png',
+        icon: path.join(__dirname, '/build/icons/512x512.png'),
         webPreferences: {
             nodeIntegration: true,
             nodeIntegrationInWorker: true,

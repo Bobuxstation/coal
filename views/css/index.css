@@ -44,6 +44,7 @@ img {
 .navbutton {
     padding: 10px;
     -webkit-appearance: none;
+    outline: none;
     border: none;
     background: var(--main-color);
 }

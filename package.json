@@ -22,23 +22,23 @@
     "appId": "com.zeankundev.coal",
     "productName": "Coal",
     "copyright": "Copyright © 2022 zeankun.dev",
-    "icon": "./assets/logo_1024.png",
+    "icon": "build/icons/512x512.png",
     "directories": {
-      "output": "build"
+      "output": "dist"
     },
     "win": {
-      "target": "nsis, portable, squirrel",
+      "target": ["nsis", "portable"],
       "publisherName": "zeankun.dev"
     },
     "linux": {
-      "target": "deb",
+      "target": ["deb", "rpm", "AppImage", "snap"],
       "maintainer": "zeankun.dev",
       "category": "Game"
     }
   },
   "devDependencies": {
     "electron": "^4.2.12",
-    "electron-builder": "^23.3.3"
+    "electron-builder": "^20.44.4"
   },
   "dependencies": {
     "electron-reloader": "^1.2.3",

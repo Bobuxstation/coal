@@ -21,6 +21,7 @@ const maximizeWin = () => {
 minimize.addEventListener('click', minimizeWin);
 maximize.addEventListener('click', maximizeWin);
 close.addEventListener('click', closeWin);
+openMenu(event, 'home')
 // check available games in the games.json file
     /* json schema:
     {
