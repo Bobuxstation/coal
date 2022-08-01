@@ -1,35 +1,34 @@
 const {app, BrowserWindow, ipcMain} = require('electron');
 const remote = require('electron').remote;
+const fs = require('fs');
+const path = require('path');
 
-function initWindow() {
+app.on('ready', () => {
     const window = new BrowserWindow({
         width: 1024,
         height: 600,
         title: 'AB Coal',
         frame: false,
-        preload: './script/preload.js',
+        icon: './assets/logo_1024.png',
         webPreferences: {
             nodeIntegration: true,
-            contextIsolation: false,
+            nodeIntegrationInWorker: true,
+            nodeIntegrationInSubFrames: true,
             enableRemoteModule: true,
+            contextIsolation: false
         }
     });
-    require('@electron/remote/main').initialize();
-    try {
+    /* try {
         require('electron-reloader')(module);
-    } catch (e) {}
+    } catch (e) {}*/
     window.loadFile('views/index.html');
     window.setMenuBarVisibility(false);
-}
-app.on('ready', () => {
-    initWindow();
+    // check if app.getPath('userData' + /games.json) exists
+    // if not, create it
+    if (!fs.existsSync(app.getPath('userData') + '/games.json')) {
+        fs.writeFileSync(app.getPath('userData') + '/games.json', '{ "games": [] }');
+    }
 });
-ipcMain.on('open-game', (event, path, args) => {
-    const child = require('child_process').spawn(path, args);
-})
-app.on('browser-window-created', (event, window) => {
-    require('@electron/remote/main').enable(window.webContents);
-})
 // exit all windows onclose
 app.on('window-all-closed', () => {
     app.quit();

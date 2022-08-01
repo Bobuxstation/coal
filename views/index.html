@@ -19,7 +19,45 @@
             </ul>
         </div>
         <div class="container">
-            <object data="home.html">
+            <div id="home">
+                <div class="home">
+                    <h1>Welcome back!</h1>
+                    <div id="game-list"></div>
+                    <div class="modal" id="add-game">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <span class="close" id="close">&times;</span>
+                                <h2>Add game</h2>
+                            </div>
+                            <div class="modal-body">
+                                <form id="add-game-form">
+                                    <label for="game-name">Game name</label>
+                                    <br>
+                                    <input type="text" id="game-name" name="game-name" placeholder="Enter game name">
+                                    <br>
+                                    <label for="game-id">Game ID</label>
+                                    <br>
+                                    <input type="text" id="game-id" name="game-id" placeholder="Enter game ID">
+                                    <br>
+                                    <label for="game-platform">Binary directory</label>
+                                    <br>
+                                    <input type="text" id="binary-location" name="binary-location" placeholder="Enter binary location like ~/hl2_linux">
+                                    <br>
+                                    <label for="game-args">Game arguments</label>
+                                    <br>
+                                    <input type="text" id="game-args" name="game-args" placeholder="Enter game arguments like -game tf2">
+                                    <br>
+                                    <label for="game-image">Icon Image</label>
+                                    <br>
+                                    <input type="text" id="game-image" name="game-image" placeholder="">
+                                    <br>
+                                    <button type="submit" class="button" id="add-game-button">Add game</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <script src="../script/main.js"></script>
     </body>

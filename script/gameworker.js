@@ -28,8 +28,12 @@
                     gameButton.className = "play";
                     gameButton.innerHTML = "Play";
                     gameButton.onclick = function() {
-                        // send ipc to main to open executable
-                        window.electronAPI.launchGame(game.path, game.args);
+                        // downgraded to electron v4, now we can require child_process.
+                        const { spawn } = require('child_process');
+                        const process = spawn(game.exec, game.args.split(" "));
+                        process.on('error', (err) => {
+                            console.log(err);
+                        });
                     }
                     gameDisplay.appendChild(gameButton);
                     gameList.appendChild(gameDisplay);
