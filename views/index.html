@@ -7,10 +7,10 @@
     </head>
     <body>
         <div class="menu-tab">
-            <button class="tab selected"><img src="../assets/home_1024.png"></button>
+            <button class="tab selected" id="home"><img src="../assets/home_1024.png"></button>
             <button class="tab unselected"><img src="../assets/library_1024.png"></button>
             <button class="tab unselected"><img src="../assets/news_1024.png"></button>
-            <button class="tab unselected"><img src="../assets/settings_1024.png"></button>
+            <button class="tab unselected" id="settings"><img src="../assets/settings_1024.png"></button>
             <div style="display: flex; -webkit-app-region: drag; width: 60%;"></div>
             <ul class="navbars">
                 <button class="navbutton" id="minimize"><img src="../assets/minimize_1024.png"></button>
@@ -19,7 +19,7 @@
             </ul>
         </div>
         <div class="container">
-            <div id="home">
+            <div id="home" class="tabcontent">
                 <div class="home">
                     <h1>Welcome back!</h1>
                     <div id="game-list"></div>
