@@ -18,9 +18,9 @@ app.on('ready', () => {
             contextIsolation: false
         }
     });
-    /* try {
+    try {
         require('electron-reloader')(module);
-    } catch (e) {}*/
+    } catch (e) {}
     window.loadFile('views/index.html');
     window.setMenuBarVisibility(false);
     // check if app.getPath('userData' + /games.json) exists

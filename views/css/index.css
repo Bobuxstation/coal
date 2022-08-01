@@ -5,6 +5,7 @@ body {
     background: var(--main-color);
     color: var(--main-text);
     font-family: system-ui;
+    user-select: none;
 }
 .menu-tab {
     display: flex;
@@ -20,13 +21,20 @@ img {
     padding: 10px;
     -webkit-appearance: none;
     border: none;
+    outline: none;
+    background: var(--main-color);
 }
-.selected {background: var(--main-hover-color);}
-.unselected {background: var(--main-color);}
-.unselected:hover {background: var(--main-hover-color);}
+.tab:hover {
+    background: var(--main-color-hover);
+}
+.active {
+    background: #2e2e2e !important;
+    transition: all 0.3s ease-in-out;
+}
+
 .container {
     background: var(--main-hover-color);
-    display: flex;
+    display: none;
     padding: 20px;
 }
 .navbars {
@@ -86,6 +94,9 @@ object {
     color: var(--main-text);
     width: 240px;
     cursor: pointer;
+}
+.play:hover {
+    background-color: var(--play-color-hover);
 }
 .modal {
     background-color: var(--main-color);

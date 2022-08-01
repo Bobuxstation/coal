@@ -7,10 +7,10 @@
     </head>
     <body>
         <div class="menu-tab">
-            <button class="tab selected" id="home"><img src="../assets/home_1024.png"></button>
-            <button class="tab unselected"><img src="../assets/library_1024.png"></button>
-            <button class="tab unselected"><img src="../assets/news_1024.png"></button>
-            <button class="tab unselected" id="settings"><img src="../assets/settings_1024.png"></button>
+            <button class="tab" onclick="openMenu(event, 'home')" id="home-tab"><img src="../assets/home_1024.png"></button>
+            <button class="tab"onclick="openMenu(event, 'library'); getGamesAlt()" id="library-tab"><img src="../assets/library_1024.png"></button>
+            <button class="tab"><img src="../assets/news_1024.png"></button>
+            <button class="tab" onclick="openMenu(event, 'settings')" id="settings-tab"><img src="../assets/settings_1024.png"></button>
             <div style="display: flex; -webkit-app-region: drag; width: 60%;"></div>
             <ul class="navbars">
                 <button class="navbutton" id="minimize"><img src="../assets/minimize_1024.png"></button>
@@ -23,39 +23,18 @@
                 <div class="home">
                     <h1>Welcome back!</h1>
                     <div id="game-list"></div>
-                    <div class="modal" id="add-game">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <span class="close" id="close">&times;</span>
-                                <h2>Add game</h2>
-                            </div>
-                            <div class="modal-body">
-                                <form id="add-game-form">
-                                    <label for="game-name">Game name</label>
-                                    <br>
-                                    <input type="text" id="game-name" name="game-name" placeholder="Enter game name">
-                                    <br>
-                                    <label for="game-id">Game ID</label>
-                                    <br>
-                                    <input type="text" id="game-id" name="game-id" placeholder="Enter game ID">
-                                    <br>
-                                    <label for="game-platform">Binary directory</label>
-                                    <br>
-                                    <input type="text" id="binary-location" name="binary-location" placeholder="Enter binary location like ~/hl2_linux">
-                                    <br>
-                                    <label for="game-args">Game arguments</label>
-                                    <br>
-                                    <input type="text" id="game-args" name="game-args" placeholder="Enter game arguments like -game tf2">
-                                    <br>
-                                    <label for="game-image">Icon Image</label>
-                                    <br>
-                                    <input type="text" id="game-image" name="game-image" placeholder="">
-                                    <br>
-                                    <button type="submit" class="button" id="add-game-button">Add game</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
+                </div>
+            </div>
+            <div id="library" class="tabcontent">
+                <div class="library">
+                    <h1>Library</h1>
+                    <div id="game-list-alt"></div>
+                </div>
+            </div>
+            <div id="settings" class="tabcontent">
+                <div class="settings">
+                    <h1>Settings</h1>
+                    <div id="settings-list"></div>
                 </div>
             </div>
         </div>
