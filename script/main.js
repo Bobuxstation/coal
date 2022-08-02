@@ -16,7 +16,8 @@ const minimizeWin = () => {
 const maximizeWin = () => {
     const win = getWin();
     win.isMaximized() ? win.unmaximize() : win.maximize();
-    win.isMaximized() ? imageToggle.src = '../assets/maximize_1024.png' : imageToggle.src = '../assets/restore_down_1024.png';
+    // changed the isMaximized imgToggle because known to be problematic on Windows
+    win.isMaximized() ? imageToggle.src = '../assets/restore_down_1024.png' : imageToggle.src = '../assets/maximize_1024.png';
 }
 minimize.addEventListener('click', minimizeWin);
 maximize.addEventListener('click', maximizeWin);
