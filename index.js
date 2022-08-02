@@ -2,6 +2,7 @@ const {app, BrowserWindow, ipcMain} = require('electron');
 const remote = require('electron').remote;
 const fs = require('fs');
 const path = require('path');
+const APP_ICON = path.join(__dirname, '/build/icons/logo_1024.png');
 
 app.on('ready', () => {
     const window = new BrowserWindow({
@@ -9,7 +10,7 @@ app.on('ready', () => {
         height: 600,
         title: 'AB Coal',
         frame: false,
-        icon: path.join(__dirname, '/build/icons/512x512.png'),
+        icon: APP_ICON,
         webPreferences: {
             nodeIntegration: true,
             nodeIntegrationInWorker: true,

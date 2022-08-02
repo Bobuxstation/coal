@@ -9,10 +9,11 @@
         <div class="menu-tab">
             <button class="tab" onclick="openMenu(event, 'home')" id="home-tab"><img src="../assets/home_1024.png"></button>
             <button class="tab"onclick="openMenu(event, 'library'); getGamesAlt()" id="library-tab"><img src="../assets/library_1024.png"></button>
-            <button class="tab"><img src="../assets/news_1024.png"></button>
+            <button class="tab" onclick="openMenu(event, 'store')" id="store-tab"><img src="../assets/news_1024.png"></button>
             <button class="tab" onclick="openMenu(event, 'settings')" id="settings-tab"><img src="../assets/settings_1024.png"></button>
             <div style="display: flex; -webkit-app-region: drag; width: 60%;"></div>
             <ul class="navbars">
+                <button class="navbutton" id="downloads"><img src="../assets/download_1024.png"></button>
                 <button class="navbutton" id="minimize"><img src="../assets/minimize_1024.png"></button>
                 <button class="navbutton" id="maximize"><img src="../assets/maximize_1024.png" id="img-toggle"></button>
                 <button class="navbutton" id="close"><img src="../assets/close_1024.png"></button>
@@ -31,10 +32,17 @@
                     <div id="game-list-alt"></div>
                 </div>
             </div>
+            <div id="store" class="tabcontent">
+                <div class="store">
+                    <h1>Store (WIP)</h1>
+                </div>
+            </div>
             <div id="settings" class="tabcontent">
                 <div class="settings">
                     <h1>Settings</h1>
-                    <div id="settings-list"></div>
+                    <div id="settings-list">
+                        <button class="button" style="margin-top: 10px;" id="games-open">Open games.json file</button>
+                    </div>
                 </div>
             </div>
         </div>

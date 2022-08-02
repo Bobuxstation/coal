@@ -35,6 +35,7 @@ openMenu(event, 'home')
             ...
         ]
     }*/
+    const exec = require('child_process').exec;
     function getGames() {
         fetch(app.getPath('userData') + '/games.json')
             .then(response => response.json())
