@@ -13,3 +13,4 @@ Run with npm, by doing this command.
 Then running via 
 ```npm start```
 Done. 🥰
+# [Join the discussion on Discord. Click the heading to continue!](https://discord.gg/3ujWSgkawv)
