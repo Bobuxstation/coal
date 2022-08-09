@@ -153,3 +153,21 @@ openMenu(event, 'home')
         document.getElementById(menu + '-tab').className = "tab active";
         console.log("OK: e.currentTarget.className += \" active\"");
     }
+    function fetchStores() {
+        fetch('../test/CoalStore.json')
+            .then(response => response.json())
+            .then(data => {
+                let storeList = document.getElementById("store-list");
+                storeList.innerHTML = "";
+                data.stores.forEach(store => {
+                    let storeDisplay = document.createElement("div");
+                    storeDisplay.className = "store-display";
+                    storeDisplay.innerHTML = `
+                        <div class="store-title">${store.name}</div>
+                        <div class="store-description">${store.description}</div>
+                        <div class="store-price">${store.price}</div>
+                    `;
+                    storeList.appendChild(storeDisplay);
+                });
+            });
+    }
