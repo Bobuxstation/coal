@@ -16,7 +16,8 @@ const minimizeWin = () => {
 const maximizeWin = () => {
     const win = getWin();
     win.isMaximized() ? win.unmaximize() : win.maximize();
-    win.isMaximized() ? imageToggle.src = '../assets/maximize_1024.png' : imageToggle.src = '../assets/restore_down_1024.png';
+    // changed the isMaximized imgToggle because known to be problematic on Windows
+    win.isMaximized() ? imageToggle.src = '../assets/restore_down_1024.png' : imageToggle.src = '../assets/maximize_1024.png';
 }
 minimize.addEventListener('click', minimizeWin);
 maximize.addEventListener('click', maximizeWin);
@@ -153,6 +154,7 @@ openMenu(event, 'home')
         document.getElementById(menu + '-tab').className = "tab active";
         console.log("OK: e.currentTarget.className += \" active\"");
     }
+<<<<<<< HEAD
     function fetchStores() {
         fetch('../test/CoalStore.json')
             .then(response => response.json())
@@ -171,3 +173,5 @@ openMenu(event, 'home')
                 });
             });
     }
+=======
+>>>>>>> 6d4f9b3409782df305ec72426f2b1141d0474209
