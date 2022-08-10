@@ -2,7 +2,7 @@ const {app, BrowserWindow, ipcMain} = require('electron');
 const remote = require('electron').remote;
 const fs = require('fs');
 const path = require('path');
-const APP_ICON = path.join(__dirname, '/build/icons/logo_1024.png');
+const APP_ICON = path.join(__dirname, '/build/icons/512x512.png');
 
 app.on('ready', () => {
     const window = new BrowserWindow({
