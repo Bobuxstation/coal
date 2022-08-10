@@ -154,7 +154,6 @@ openMenu(event, 'home')
         document.getElementById(menu + '-tab').className = "tab active";
         console.log("OK: e.currentTarget.className += \" active\"");
     }
-<<<<<<< HEAD
     function fetchStores() {
         fetch('../test/CoalStore.json')
             .then(response => response.json())
@@ -173,5 +172,3 @@ openMenu(event, 'home')
                 });
             });
     }
-=======
->>>>>>> 6d4f9b3409782df305ec72426f2b1141d0474209
