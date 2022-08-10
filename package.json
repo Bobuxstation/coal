@@ -33,7 +33,8 @@
     "linux": {
       "target": ["deb", "rpm", "AppImage", "snap"],
       "maintainer": "zeankun.dev",
-      "category": "Game"
+      "category": "Game",
+      "icon": "build/icons/512x512.png"
     }
   },
   "devDependencies": {
